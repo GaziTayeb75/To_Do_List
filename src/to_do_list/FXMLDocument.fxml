@@ -44,7 +44,7 @@
                   <TextField fx:id="signup_password" layoutX="55.0" layoutY="192.0" prefHeight="28.0" prefWidth="196.0" promptText="PassWord" />
                   <TextField fx:id="signup_cPassword" layoutX="55.0" layoutY="237.0" prefHeight="28.0" prefWidth="196.0" promptText="Confirm PassWord" />
                   <PasswordField layoutX="52.0" layoutY="213.0" prefHeight="31.0" prefWidth="196.0" promptText="PassWord" visible="false" />
-                  <Button fx:id="signup_btn" layoutX="55.0" layoutY="391.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="196.0" text="Sign Up" />
+                  <Button fx:id="signup_btn" layoutX="55.0" layoutY="391.0" mnemonicParsing="false" onAction="#register" prefHeight="31.0" prefWidth="196.0" text="Sign Up" />
                   <Label layoutX="98.0" layoutY="452.0" prefHeight="21.0" prefWidth="104.0" text="Sign in Account" />
                   <Button fx:id="signup_loginAccount" layoutX="44.0" layoutY="485.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="217.0" text="Login Account" />
                   <ComboBox fx:id="signup_selectQuestion" layoutX="52.0" layoutY="282.0" prefHeight="27.0" prefWidth="196.0" promptText="Select Question" />
