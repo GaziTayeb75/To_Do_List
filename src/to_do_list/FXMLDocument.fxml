@@ -15,7 +15,7 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <AnchorPane fx:id="main_form" layoutX="15.0" layoutY="20.0" prefHeight="563.0" prefWidth="299.0" visible="false">
+            <AnchorPane fx:id="login_form" layoutX="15.0" layoutY="20.0" prefHeight="563.0" prefWidth="299.0">
                <children>
                   <Label layoutX="98.0" layoutY="74.0" text="Sign in Account">
                      <font>
@@ -23,16 +23,16 @@
                      </font>
                   </Label>
                   <TextField fx:id="login_username" layoutX="52.0" layoutY="142.0" prefHeight="37.0" prefWidth="196.0" promptText="User name" />
-                  <TextField fx:id="login_showPassword" layoutX="52.0" layoutY="207.0" prefHeight="37.0" prefWidth="196.0" promptText="PassWord" />
-                  <PasswordField fx:id="login_password" layoutX="52.0" layoutY="207.0" prefHeight="37.0" prefWidth="196.0" promptText="PassWord" visible="false" />
+                  <TextField fx:id="login_password" layoutX="52.0" layoutY="207.0" prefHeight="37.0" prefWidth="196.0" promptText="PassWord" />
+                  <PasswordField fx:id="login_showPassword" layoutX="52.0" layoutY="207.0" prefHeight="37.0" prefWidth="196.0" promptText="PassWord" visible="false" />
                   <CheckBox fx:id="login_selectShowPassword" layoutX="39.0" layoutY="252.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="118.0" text="show password" />
-                  <Button fx:id="login_btn" layoutX="52.0" layoutY="310.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="196.0" text="Button" />
+                  <Button fx:id="login_btn" layoutX="52.0" layoutY="310.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="196.0" text="Login" />
                   <Label layoutX="98.0" layoutY="452.0" prefHeight="21.0" prefWidth="104.0" text="Register Account" />
-                  <Button fx:id="login_createAccount" layoutX="41.0" layoutY="485.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Create Account" />
-                  <Hyperlink fx:id="login_forgotPassword" layoutX="165.0" layoutY="250.0" text="forgot password?" />
+                  <Button fx:id="login_createAccount" layoutX="41.0" layoutY="485.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="217.0" text="Create Account" />
+                  <Hyperlink fx:id="login_forgotPassword" layoutX="165.0" layoutY="250.0" onAction="#switchForm" text="forgot password?" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="signup_form" layoutX="15.0" layoutY="12.0" prefHeight="563.0" prefWidth="299.0">
+            <AnchorPane fx:id="signup_form" layoutX="15.0" layoutY="12.0" prefHeight="563.0" prefWidth="299.0" visible="false">
                <children>
                   <Label layoutX="98.0" layoutY="74.0" text="Sign Up Account">
                      <font>
@@ -46,7 +46,7 @@
                   <PasswordField layoutX="52.0" layoutY="213.0" prefHeight="31.0" prefWidth="196.0" promptText="PassWord" visible="false" />
                   <Button fx:id="signup_btn" layoutX="55.0" layoutY="391.0" mnemonicParsing="false" onAction="#register" prefHeight="31.0" prefWidth="196.0" text="Sign Up" />
                   <Label layoutX="98.0" layoutY="452.0" prefHeight="21.0" prefWidth="104.0" text="Sign in Account" />
-                  <Button fx:id="signup_loginAccount" layoutX="44.0" layoutY="485.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="217.0" text="Login Account" />
+                  <Button fx:id="signup_loginAccount" layoutX="44.0" layoutY="485.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="37.0" prefWidth="217.0" text="Login Account" />
                   <ComboBox fx:id="signup_selectQuestion" layoutX="52.0" layoutY="282.0" prefHeight="27.0" prefWidth="196.0" promptText="Select Question" />
                   <TextField fx:id="signup_answer" layoutX="52.0" layoutY="324.0" prefHeight="25.0" prefWidth="196.0" promptText="Answer" />
                </children>
@@ -60,8 +60,8 @@
                   </Label>
                   <TextField fx:id="forgot_answer" layoutX="55.0" layoutY="229.0" prefHeight="28.0" prefWidth="196.0" promptText="Select Question" />
                   <PasswordField layoutX="52.0" layoutY="213.0" prefHeight="31.0" prefWidth="196.0" promptText="PassWord" visible="false" />
-                  <Button fx:id="forgot_proceedBtr" layoutX="52.0" layoutY="362.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="196.0" text="Proceed" />
-                  <Button fx:id="forgot_backBtn" layoutX="44.0" layoutY="452.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="70.0" text="Back" />
+                  <Button fx:id="forgot_proceedBtr" layoutX="52.0" layoutY="362.0" mnemonicParsing="false" onAction="#forgotPassword" prefHeight="31.0" prefWidth="196.0" text="Proceed" />
+                  <Button fx:id="forgot_backBtn" layoutX="44.0" layoutY="452.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="37.0" prefWidth="70.0" text="Back" />
                   <ComboBox fx:id="forgot_selectQuestion" layoutX="55.0" layoutY="185.0" prefHeight="27.0" prefWidth="196.0" promptText="Select Question" />
                   <TextField fx:id="forgot_username" layoutX="55.0" layoutY="139.0" prefHeight="31.0" prefWidth="196.0" text="User Name" />
                </children>
@@ -74,8 +74,8 @@
                      </font>
                   </Label>
                   <PasswordField layoutX="52.0" layoutY="213.0" prefHeight="31.0" prefWidth="196.0" promptText="PassWord" visible="false" />
-                  <Button fx:id="changePass_proceedBtn" layoutX="36.0" layoutY="282.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="196.0" text="Proceed" />
-                  <Button fx:id="changePass_backBtn" layoutX="44.0" layoutY="452.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="70.0" text="Back" />
+                  <Button fx:id="changePass_proceedBtn" layoutX="36.0" layoutY="282.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="31.0" prefWidth="196.0" text="Change Password" />
+                  <Button fx:id="changePass_backBtn" layoutX="44.0" layoutY="452.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="37.0" prefWidth="70.0" text="Back" />
                   <PasswordField fx:id="changePass_cPassword" layoutX="44.0" layoutY="232.0" promptText="Confirm Password" />
                   <PasswordField fx:id="changePass_password" layoutX="45.0" layoutY="181.0" promptText="PassWord" />
                </children>
