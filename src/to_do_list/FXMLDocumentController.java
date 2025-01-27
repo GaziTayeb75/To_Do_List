@@ -148,7 +148,7 @@ public class FXMLDocumentController implements Initializable {
                
                     //to link the main form
                     
-                Parent root = FXMLLoader.load(getClass().getResource("mainForm.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
                 Stage stage = new Stage();
                 Scene scene = new Scene(root);
                 
