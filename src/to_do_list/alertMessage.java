@@ -7,10 +7,7 @@ package to_do_list;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-/**
- *
- * @author user
- */
+
 public class alertMessage {
     private Alert alert;
     

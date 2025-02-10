@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
 
+<AnchorPane prefHeight="475.0" prefWidth="634.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="to_do_list.DashboardController">
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="to_do_list.DashboardController">
-   <children>
-      <Text layoutX="277.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Complete" wrappingWidth="212.13671875" />
-   </children>
+    <children>
+        <Label layoutX="210.0" layoutY="38.0" text="Todo List" />
+        <Button fx:id="addTodoButton" layoutX="210.0" layoutY="70.0" onAction="#handleAddTodo" text="Add New Todo" />
+        <Label layoutX="210.0" layoutY="130.0" text="Entry Todo List" />
+        <ListView fx:id="todoListView" layoutX="60.0" layoutY="160.0" prefHeight="200.0" prefWidth="500.0" />
+        <Button fx:id="updateButton" layoutX="289.0" layoutY="372.0" onAction="#handleUpdateTodo" text="Update Selected" />
+        <Button fx:id="deleteButton" layoutX="176.0" layoutY="372.0" onAction="#handleDeleteTodo" text="Delete Selected" />
+    </children>
 </AnchorPane>
